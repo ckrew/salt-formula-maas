@@ -16,7 +16,7 @@ declare -A interfaces
 for iface in ${ethernets[@]}; do
   speed=`ethtool $iface | grep '40000'`
   if [[ "$?" == 0 ]]; then
-    interfaces[$iface]="fourty$i"
+    interfaces[$iface]="forty$i"
     ((i++))
   else
     speed=`ethtool $iface | grep '10000' `
